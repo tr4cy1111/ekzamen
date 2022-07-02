@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileExam.Pages.NotePage"
+             Title="        Изменить аккаунт">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="bin.png"  Order="Primary" x:Name="NewProject" Clicked="BtnDelete_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Center" Margin="0, 15, 0, 0" >
+
+                <Picker x:Name="PType"
+                    ItemsSource="{Binding}"
+                        ItemDisplayBinding="{Binding Name}"
+                        SelectedItem="{Binding currentType}"
+                        Background="#e8e8e8"
+                    Margin="40, 7, 90, 0"/>
+
+
+                <Button
+                    x:Name="BtnAddType"
+                    CornerRadius="40"
+                       WidthRequest="20"
+                    Text="+"
+
+                    FontSize="20"
+                    TextColor="white"
+                    Background="black"
+                       Margin="315,-50,30,0"
+                    Clicked="BtnAddType_Clicked"/>
+
+                <Entry Placeholder="Логин" 
+                           PlaceholderColor="Gray"  
+                           x:Name="ELogin" 
+                           Text="{Binding Login}"
+                           TextColor="Black"
+                       Margin="40, 7, 40, 0"
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="40"/>
+
+                <Entry Placeholder="Пароль" 
+                           PlaceholderColor="Gray"  
+                           x:Name="EPassword" 
+                           Text="{Binding Password}"
+                           TextColor="Black"
+                       Margin="40, 7, 40, 0"
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="40"/>
+
+                <Entry Placeholder="URL" 
+                           PlaceholderColor="Gray"  
+                           x:Name="EURL" 
+                           Text="{Binding URL}"
+                           TextColor="Black"
+                       Margin="40, 7, 40, 0"
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="40"/>
+
+                <FlexLayout Direction="RowReverse"  JustifyContent="Center" HorizontalOptions="Center">
+
+                    <Button Text="Изменить" 
+                        CornerRadius="200" 
+                        BackgroundColor="Black" 
+                        TextColor="White" 
+                        x:Name="BtnSave" 
+                        Clicked="BtnSave_Clicked"
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="9.6"
+                        Margin="0, 30, 11, 0"/>
+
+                    <Button Text="Назад" 
+                        CornerRadius="200" 
+                        BackgroundColor="Black" 
+                        TextColor="White" 
+                        x:Name="BtnBack" 
+                        Clicked="BtnBack_Clicked"
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="9.6"
+                        Margin="0, 30, 11, 0"/>
+                </FlexLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

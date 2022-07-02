@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileExam.Pages.AuthoPage"
+             Title="           Приветствую, USERNAME">
+    <ContentPage.Content>
+
+        <StackLayout Margin="40,30,40,30">
+
+            <Entry Placeholder="Пароль"
+                    PlaceholderColor="Gray"
+                    TextColor="Black"
+                    x:Name="EPassword"
+                    IsPassword="True"
+                    BackgroundColor="#e8e8e8"
+                    HeightRequest="60"/>
+
+            <FlexLayout Direction="Row" 
+                        JustifyContent="SpaceBetween"
+                        Margin="0,60,19,0">
+
+                <Button Text="Войти" 
+                        CornerRadius="200" 
+                        BackgroundColor="black" 
+                        TextColor="White" 
+                        x:Name="BtnLogin" 
+                        Clicked="BtnLogin_Clicked"
+                        HeightRequest="49"
+                        WidthRequest="149"
+                       Margin="80,0,0,0"
+                        FontSize="9.6"/>
+            </FlexLayout>
+        </StackLayout>
+        
+        
+       
+
+    </ContentPage.Content>
+</ContentPage>

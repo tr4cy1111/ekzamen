@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileExam.Pages.NotesPage"
+             Title="                 Пароли">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="plus.png"  Order="Primary" x:Name="NewProject" Clicked="NewProject_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+        <ListView
+            x:Name="LVNotes"
+            ItemSelected="LVNotes_ItemSelected"
+            ItemsSource="{Binding}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Background="White">
+                                <Label Padding="10" Text="{Binding URL}" TextColor="Black" FontSize="Medium" />
+                                <Label Padding="10" Text="{Binding Type.Name}" TextColor="Black" FontSize="Medium" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
